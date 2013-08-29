@@ -1,0 +1,10 @@
+{
+    "name": "chrome-platform-analytics",
+    "version": 1.0,
+    "main": "google-analytics-bundle.js",
+    "ignore": [
+        "src"
+    ]
+}
+
+

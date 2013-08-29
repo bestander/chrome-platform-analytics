@@ -1,3 +1,6 @@
+var ChromeAnalytics = (function () {
+    
+
 var g,aa=aa||{},l=this,ba=function(a){a=a.split(".");for(var b=l,c;c=a.shift();)if(null!=b[c])b=b[c];else return null;return b},ca=function(){},da=function(a){a.Sa=function(){return a.bb?a.bb:a.bb=new a}},m=function(a){var b=typeof a;if("object"==b)if(a){if(a instanceof Array)return"array";if(a instanceof Object)return b;var c=Object.prototype.toString.call(a);if("[object Window]"==c)return"object";if("[object Array]"==c||"number"==typeof a.length&&"undefined"!=typeof a.splice&&"undefined"!=typeof a.propertyIsEnumerable&&
 !a.propertyIsEnumerable("splice"))return"array";if("[object Function]"==c||"undefined"!=typeof a.call&&"undefined"!=typeof a.propertyIsEnumerable&&!a.propertyIsEnumerable("call"))return"function"}else return"null";else if("function"==b&&"undefined"==typeof a.call)return"object";return b},n=function(a){return"array"==m(a)},ea=function(a){var b=m(a);return"array"==b||"object"==b&&"number"==typeof a.length},p=function(a){return"string"==typeof a},fa=function(a){return"number"==typeof a},ga=function(a){var b=
 typeof a;return"object"==b&&null!=a||"function"==b},s="closure_uid_"+(1E9*Math.random()>>>0),ha=0,ia=function(a,b,c){return a.call.apply(a.bind,arguments)},ja=function(a,b,c){if(!a)throw Error();if(2<arguments.length){var d=Array.prototype.slice.call(arguments,2);return function(){var c=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(c,d);return a.apply(b,c)}}return function(){return a.apply(b,arguments)}},t=function(a,b,c){t=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?
@@ -73,3 +76,7 @@ $.prototype.j=function(){$.K.j.call(this);this.fa.ka();this.fa=null;this.e&&(thi
 u("analytics.internal.ServiceChannel.prototype.getConfig",N.prototype.Jb);u("analytics.internal.ServiceSettings",O);u("analytics.internal.ServiceSettings.prototype.setTrackingPermitted",O.prototype.Qb);u("analytics.internal.ServiceSettings.prototype.isTrackingPermitted",O.prototype.Ta);u("analytics.internal.ServiceSettings.prototype.setSampleRate",O.prototype.Pb);u("analytics.internal.ServiceTracker",M);u("analytics.internal.ServiceTracker.prototype.send",M.prototype.send);
 u("analytics.internal.ServiceTracker.prototype.sendAppView",M.prototype.Lb);u("analytics.internal.ServiceTracker.prototype.sendEvent",M.prototype.Mb);u("analytics.internal.ServiceTracker.prototype.sendSocial",M.prototype.Ob);u("analytics.internal.ServiceTracker.prototype.sendException",M.prototype.Nb);u("analytics.HitTypes.APPVIEW","appview");u("analytics.HitTypes.EVENT","event");u("analytics.HitTypes.SOCIAL","social");u("analytics.HitTypes.TRANSACTION","transaction");
 u("analytics.HitTypes.ITEM","item");u("analytics.HitTypes.TIMING","timing");u("analytics.HitTypes.EXCEPTION","exception");Ea(kb,function(a){var b=a.id.replace(/[A-Z]/,"_$&").toUpperCase();u("analytics.Parameters."+b,a)});
+
+    return analytics;
+
+})();
